@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtBookingDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#4A0B15"
+        android:background="@color/purple_200"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="Make a booking" />
+
+    <TableLayout
+        android:id="@+id/tlDate"
+        android:layout_width="match_parent"
+        android:layout_below="@id/txtBookingDetails"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <TableRow android:weightSum="10"          android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select date:"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/txtDateDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DD/MM/YYYY"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_weight="6"/>
+            <TextView/>
+            <ImageButton
+                android:id="@+id/btnSelectDate"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:src="@drawable/_calendar"
+                android:layout_weight="2"/>
+        </TableRow>
+        <TableRow android:weightSum="10">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select time in:"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/txtTimeinDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HH:MM"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_weight="6"/>
+            <TextView/>
+            <ImageButton
+                android:id="@+id/btnSelectTimein"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:src="@drawable/_timein"
+                android:layout_weight="2"/>
+        </TableRow>
+        <TableRow android:weightSum="10">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select time out:"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/txtTimeoutDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HH:MM"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_weight="6"/>
+            <TextView/>
+            <ImageButton
+                android:id="@+id/btnSelectTimeout"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:src="@drawable/_timeout"
+                android:layout_weight="2"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tlDate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="4"
+        android:text="Book space"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tlDate"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="4"
+        android:text="Go back"
+        android:textSize="12sp" />
+
+</RelativeLayout>
